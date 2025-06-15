@@ -82,6 +82,8 @@ class PV:
                     refindex = weather.index
                     shift_minutes = int(str(pv.index[0])[14:16])
                     refindex = refindex.shift(shift_minutes,'min')
+                    delta = pv.index[0] - refindex[0]
+                    refindex = refindex + delta
                     pv = pv[refindex]
                     
                 else: # INT

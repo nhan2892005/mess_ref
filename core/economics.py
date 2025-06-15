@@ -50,12 +50,12 @@ def NPV(file_studycase,
     years_factor = int(economic_data['investment years'] / c.simulation_years) # this factor is useful to match the length of the energy simulation with the length of the economic investment
     
     # open cost of componenets of studycase and refcase
-    with open('Results/pkl/tech_cost_'+name_studycase+'.pkl', 'rb')     as f:        tc     = pickle.load(f)        
-    with open('Results/pkl/tech_cost_'+name_refcase+'.pkl', 'rb')       as f:        tc0    = pickle.load(f)
+    with open('results/pkl/tech_cost_'+name_studycase+'.pkl', 'rb')     as f:        tc     = pickle.load(f)        
+    with open('results/pkl/tech_cost_'+name_refcase+'.pkl', 'rb')       as f:        tc0    = pickle.load(f)
     
     # open energy balances of study and reference case
-    with open('Results/pkl/balances_'+name_studycase+'.pkl', 'rb')  as f:        balances   = pickle.load(f)        
-    with open('Results/pkl/balances_'+name_refcase+'.pkl', 'rb')    as f:        balances0  = pickle.load(f)
+    with open('results/pkl/balances_'+name_studycase+'.pkl', 'rb')  as f:        balances   = pickle.load(f)        
+    with open('results/pkl/balances_'+name_refcase+'.pkl', 'rb')    as f:        balances0  = pickle.load(f)
     
     # open detailed production balances of study and reference case
     with open('results/pkl/production_'+name_studycase+'.pkl', 'rb')           as f: production  = pickle.load(f)
@@ -534,7 +534,7 @@ def NPV(file_studycase,
         
     if form == 'pkl':
         # save results in Results/economic_assesment.pkl
-        with open(f"Results/pkl/economic_assessment_{name_economic}.pkl", 'wb') as f:  pickle.dump(results,f) 
+        with open(f"results/pkl/economic_assessment_{name_economic}.pkl", 'wb') as f:  pickle.dump(results,f) 
         
     if form == 'csv':
         df1 = {} #cashflow
