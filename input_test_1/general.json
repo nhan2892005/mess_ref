@@ -1,9 +1,9 @@
 {
-"simulation years": 1,
+"simulation years": 10,
 "timestep": 60,
-"latitude": 40.30,
-"longitude": 30.12,
-"UTC time zone": 1,
+"latitude": 10.4,
+"longitude": 106.6333,
+"UTC time zone": 7,
 "DST": true,
 "weather": "TMY"
 }
